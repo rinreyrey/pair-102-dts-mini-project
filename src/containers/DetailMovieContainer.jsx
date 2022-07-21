@@ -29,7 +29,10 @@ export default function DetailMovieContainer({dataprop}) {
                         <Typography variant='body2' style={{color:"white"}}>{desc}</Typography>
                         <div style={{display:'flex',gap:'10px',marginTop:'10px'}}>
                             <Button variant="contained"><PlayArrowIcon style={{marginRight:'7px'}}></PlayArrowIcon>Play</Button>
-                            <Button variant="contained"><InfoOutlinedIcon style={{marginRight:'7px'}}></InfoOutlinedIcon>More information</Button>
+                            <Button variant="outline" sx={{ "&.MuiButton-outline": {
+    backgroundColor: "hsla(209.84, 78.72%, 46.08%, 0.50)",
+    color:"white"
+  }}}><InfoOutlinedIcon style={{marginRight:'7px'}}></InfoOutlinedIcon>More information</Button>
                         </div>
                     </Box>
                 </Box>

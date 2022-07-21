@@ -7,7 +7,7 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 export default function DetailMovieContainerMobile({dataprop}) {
     const { data, error, isLoading } = useGetMovieGenreQuery();
-    if(dataprop.overview.length>200){ var desc = `${dataprop.overview.slice(0, 20)}....`}
+    if(dataprop.overview.length>25){ var desc = `${dataprop.overview.slice(0, 25)}....`}
     else {  desc = dataprop.overview}
     return (
         <>
@@ -29,7 +29,10 @@ export default function DetailMovieContainerMobile({dataprop}) {
                         <Typography variant='body2' style={{color:"white"}}>{desc}</Typography>
                         <div style={{display:'flex',gap:'10px',marginTop:'10px'}}>
                             <Button variant="contained" fontSize="small"><PlayArrowIcon style={{marginRight:'7px'}}></PlayArrowIcon>Play</Button>
-                            <Button variant="contained" fontSize="small"><InfoOutlinedIcon style={{marginRight:'7px'}}></InfoOutlinedIcon>Info</Button>
+                            <Button variant="outline" sx={{ "&.MuiButton-outline": {
+    backgroundColor: "hsla(209.84, 78.72%, 46.08%, 0.50)",
+    color:"white"
+  }}} fontSize="small"><InfoOutlinedIcon style={{marginRight:'7px'}}></InfoOutlinedIcon>Info</Button>
                         </div>
                     </Box>
                 </Box>
