@@ -49,8 +49,8 @@ export default function DetailMoviePlay() {
         (<Typography variant='body2'>Oh no, there was an error</Typography>)
        : Load ? 
         ( <Typography variant='body2'>Loading...</Typography>)
-       : data ? (<div className="videoWrapper">
-        <iframe width="80%" src={`https://www.youtube.com/embed/${data.results[0].key}`} title={data.results[0].name} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>) : null}
+       : data ? (data.results[0] ?<div className="videoWrapper"> 
+        <iframe width="80%" src={`https://www.youtube.com/embed/${data.results[0].key}`} title={data.results[0].name} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>:<div className='no-video'><Typography variant="body1">No video available</Typography></div>) : null}
         {err ?  
         (<Typography variant='body2'>Oh no, there was an error</Typography>)
        : Ld ? 
