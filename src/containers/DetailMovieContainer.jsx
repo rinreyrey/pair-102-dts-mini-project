@@ -26,7 +26,7 @@ export default function DetailMovieContainer({dataprop}) {
                                 return null;
                             })):null}</Typography>    
                         </div>   
-                        <Typography variant='body2'>{desc}</Typography>
+                        <Typography variant='body2' style={{color:"white"}}>{desc}</Typography>
                         <div style={{display:'flex',gap:'10px',marginTop:'10px'}}>
                             <Button variant="contained"><PlayArrowIcon style={{marginRight:'7px'}}></PlayArrowIcon>Play</Button>
                             <Button variant="contained"><InfoOutlinedIcon style={{marginRight:'7px'}}></InfoOutlinedIcon>More information</Button>
