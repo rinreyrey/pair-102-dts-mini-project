@@ -2,7 +2,7 @@ import * as React from 'react';
 // import Swiper core and required modules
 import { Autoplay, Navigation, Pagination, A11y } from 'swiper';
 import { useGetMovieNowPlayingQuery } from '../services/TMDBAPI';
-import { Link as Lin } from "react-router-dom";
+import { Link as Lin } from 'react-router-dom';
 
 import {  Swiper, SwiperSlide } from 'swiper/react';
 
@@ -50,7 +50,7 @@ export default function NowPlayingMovieCarousel() {
       >
         {
           data.results.slice(0, 10).map((item) => {
-            return <SwiperSlide key={item.id}><Lin to={`/movie/${item.id}`}><img src={`https://image.tmdb.org/t/p/w300${item.backdrop_path}`} style={{width:'100%'}} alt="Poster"></img></Lin></SwiperSlide>
+            return <SwiperSlide key={item.id}><Lin to={`../movie/${item.id}`}><img src={`https://image.tmdb.org/t/p/w300${item.backdrop_path}`} style={{width:'100%'}} alt="Poster"></img></Lin></SwiperSlide>
         })}
       </Swiper>
        )

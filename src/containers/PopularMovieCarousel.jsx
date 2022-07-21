@@ -50,7 +50,7 @@ export default function PopularMovieCarousel() {
       >
         {
           data.results.slice(0, 10).map((item) => {
-            return <SwiperSlide key={item.id}><Lin to={`/movie/${item.id}`}><img src={`https://image.tmdb.org/t/p/w300${item.backdrop_path}`} style={{width:'100%'}} alt="Poster"></img></Lin></SwiperSlide>
+            return <SwiperSlide key={item.id}><Lin to={`../movie/${item.id}`}><img src={`https://image.tmdb.org/t/p/w300${item.backdrop_path}`} style={{width:'100%'}} alt="Poster"></img></Lin></SwiperSlide>
         })}
       </Swiper>
        )

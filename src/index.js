@@ -11,6 +11,7 @@ import SignUp from "./containers/SignUp";
 import ForgotPassword from './containers/ForgotPassword';
 import DetailMovie from './containers/DetailMovie';
 import ProfilePage from './containers/ProfilePage';
+import DetailMoviePlay from './containers/DetailMoviePlay';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,6 +26,7 @@ root.render(
           <Route path="/home" element={<App />} />
           <Route path="/home/profile" element={<ProfilePage />} />
           <Route path="/movie/:id" element={<DetailMovie />} />
+          <Route path="/movie/:id/play" element={<DetailMoviePlay />} />
           <Route
             path="*"
             element={

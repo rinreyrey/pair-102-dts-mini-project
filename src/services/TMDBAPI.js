@@ -73,6 +73,13 @@ export const tmdbAPI = createApi({
             // ini artinya baseUrl + /colors => https://reqres.in/api/colors
             query: (id) => `/movie/${id}?api_key=1e2d079568dbde92bba86fc20b0a3dc1`,
         }),
+        getVideo: builder.query({
+            // di sini kita definisikan querynya mau seperti apa
+            // Berupa fungsi yah yang mengembalikan string apa yang ditempelkan ke baseUrl
+
+            // ini artinya baseUrl + /colors => https://reqres.in/api/colors
+            query: (id) => `/movie/${id}/videos?api_key=1e2d079568dbde92bba86fc20b0a3dc1&language=en-US`,
+        }),
     }),
 });
 
@@ -97,5 +104,6 @@ export const {
     useGetMovieUpcomingQuery,
     useGetMovieTopRatedQuery,
     useGetMovieGenreQuery,
-    useGetMovieDetailQuery
+    useGetMovieDetailQuery,
+    useGetVideoQuery
 } = tmdbAPI;

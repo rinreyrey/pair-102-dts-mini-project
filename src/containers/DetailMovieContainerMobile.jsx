@@ -4,6 +4,7 @@ import { Box, Typography, Button } from '@mui/material';
 import { useGetMovieGenreQuery } from '../services/TMDBAPI';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import { Link } from 'react-router-dom';
 
 export default function DetailMovieContainerMobile({dataprop}) {
     const { data, error, isLoading } = useGetMovieGenreQuery();
@@ -28,7 +29,7 @@ export default function DetailMovieContainerMobile({dataprop}) {
                         </div>   
                         <Typography variant='body2' style={{color:"white"}}>{desc}</Typography>
                         <div style={{display:'flex',gap:'10px',marginTop:'10px'}}>
-                            <Button variant="contained" fontSize="small"><PlayArrowIcon style={{marginRight:'7px'}}></PlayArrowIcon>Play</Button>
+                        <Link to={`/movie/${dataprop.id}/play`}><Button variant="contained" fontSize="small"><PlayArrowIcon style={{marginRight:'7px'}}></PlayArrowIcon>Play</Button></Link>
                             <Button variant="outline" sx={{ "&.MuiButton-outline": {
     backgroundColor: "hsla(209.84, 78.72%, 46.08%, 0.50)",
     color:"white"

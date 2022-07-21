@@ -77,3 +77,11 @@ code {
   left: 5%;
   width: 50px;
 }
+
+.videoWrapper {
+  width: 100vw;
+  height: calc(80vw / 1.77777778);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
