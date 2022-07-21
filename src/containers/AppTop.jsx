@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import {Link} from '@mui/material';
+import {Link as Lin} from 'react-router-dom';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
@@ -203,12 +204,12 @@ export default function PrimarySearchAppBar({email}) {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <Link href="/home"><img src={Logom} style={{width:'1.5em',height:'1.5em'}} alt='logo'></img></Link>
+            <Lin to={'/home'}><img src={Logom} style={{width:'1.5em',height:'1.5em'}} alt='logo'></img></Lin>
           </IconButton>
           <Box sx={{ flexGrow: 1 }} id="navlink">
           {((dimensions?.width>=830 && dimensions?.width<900)||(dimensions?.width>=1058))?
             <div style={{display:'flex',gap:'10px'}}>
-              <Link href={`/home`} style={{color:'white'}}>Home</Link>
+              <Lin to={`/home`} style={{color:'white'}}>Home</Lin>
               <Link href={`${pathname}#popular`} style={{color:'white'}}>Popular</Link>
               <Link href={`${pathname}#nowplaying`} style={{color:'white'}}>Now Playing</Link>
               <Link href={`${pathname}#toprated`} style={{color:'white'}}>Top Rated</Link>
