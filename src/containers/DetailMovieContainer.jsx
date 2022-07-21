@@ -16,10 +16,10 @@ export default function DetailMovieContainer({dataprop}) {
         backgroundRepeat: 'no-repeat',backgroundImage:`url("https://image.tmdb.org/t/p/original${dataprop.poster}")`}}>
                 <Box className='main-carousel__item' sx={{flexBasis:'45%',marginTop:0}}>
                     <Box sx={{display:'flex',flexDirection:'column',gap:'0.2em'}}>
-                        <Typography component="div" variant="h4">{dataprop.title}</Typography>
+                        <Typography component="div" variant="h4" style={{color:"white"}}>{dataprop.title}</Typography>
                         <div style={{display:'flex',gap:'0.5em'}}>
-                            <Typography variant="body2">{dataprop.language}</Typography>
-                            <Typography variant="body2">{error?'':isLoading?'':data?(data.genres.map((item)=>{
+                            <Typography variant="body2" style={{color:"white"}}>{dataprop.language}</Typography>
+                            <Typography variant="body2" style={{color:"white"}}>{error?'':isLoading?'':data?(data.genres.map((item)=>{
                                 if(item.id===dataprop.genre){
                                     return item.name;
                                 }
