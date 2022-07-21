@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 // import { Routes, Route } from 'react-router-dom';
 import Home from './containers/Home';
 // Sekarang kita akan membutuhkan useNavigate untuk memaksa pindah rute apabila user belum ada
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 // Dan juga harus menggunakan useAuthState untuk mengecek apakah sedang ada user yang login
-import { useAuthState } from "react-firebase-hooks/auth";
+// import { useAuthState } from "react-firebase-hooks/auth";
 
 // Dan membutuhkan auth dari authentication/firebase.js karena dibutuhkan oleh useAuthState
-import { auth } from "./authentication/firebase";
+// import { auth } from "./authentication/firebase";
 
 
 function App() {
